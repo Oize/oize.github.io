@@ -1,0 +1,27 @@
+{
+  "name": "oize.github.io",
+  "version": "1.0.0",
+  "description": "Oize's personal GitHub page",
+  "main": ".lib/bundle.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oize/oize.github.io.git"
+  },
+  "author": "Vladimir Khapalov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oize/oize.github.io/issues"
+  },
+  "homepage": "https://github.com/oize/oize.github.io#readme",
+  "dependencies": {
+    "react": "^15.0.2",
+    "react-dom": "^15.0.2"
+  },
+  "devDependencies": {
+    "source-map-loader": "^0.1.5",
+    "ts-loader": "^0.8.2"
+  }
+}
