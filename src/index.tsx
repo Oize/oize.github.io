@@ -1,9 +1,9 @@
 import * as React from "react";
-import * as ReacoDOM from "react-dom";
+import * as ReactDOM from "react-dom";
 
 import { App } from "./components/App";
 
-ReacoDOM.render(
+ReactDOM.render(
     <App/>,
     document.getElementById("example")
 );
