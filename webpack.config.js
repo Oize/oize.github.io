@@ -15,10 +15,15 @@ module.exports = {
     module: {
         loaders: [
             // All files with a '.ts' or '.tsx' extension will be handled by 'ts-loader'.
-            { test: /\.tsx?$/, loader: "ts-loader" }
+            { test: /\.tsx?$/, loader: "ts-loader" },
+            // css loader
+            { test: /\.css/, loader: "style!css?sourceMap" },
+            // Less loader
+            { test: /\.less$/, loader: "style!css!less?sourceMap" }
         ],
 
         preLoaders: [
+            { test: /\.tsx?$/, loader: 'tslint' },
             // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
             { test: /\.js$/, loader: "source-map-loader" }
         ]

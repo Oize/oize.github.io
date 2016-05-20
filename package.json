@@ -18,10 +18,18 @@
   "homepage": "https://github.com/oize/oize.github.io#readme",
   "dependencies": {
     "react": "^15.0.2",
+    "react-bootstrap": "^0.29.4",
     "react-dom": "^15.0.2"
   },
   "devDependencies": {
+    "bem-cn": "^1.3.1",
+    "css-loader": "^0.23.1",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
     "source-map-loader": "^0.1.5",
-    "ts-loader": "^0.8.2"
+    "style-loader": "^0.13.1",
+    "ts-loader": "^0.8.2",
+    "tslint": "^3.10.2",
+    "tslint-loader": "^2.1.4"
   }
 }
