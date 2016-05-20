@@ -47,8 +47,8 @@
 	"use strict";
 	var React = __webpack_require__(1);
 	var ReacoDOM = __webpack_require__(2);
-	var Hello_1 = __webpack_require__(3);
-	ReacoDOM.render(React.createElement(Hello_1.Hello, null), document.getElementById("example"));
+	var App_1 = __webpack_require__(3);
+	ReacoDOM.render(React.createElement(App_1.App, null), document.getElementById("example"));
 
 
 /***/ },
@@ -74,17 +74,17 @@
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
 	var React = __webpack_require__(1);
-	var Hello = (function (_super) {
-	    __extends(Hello, _super);
-	    function Hello() {
+	var App = (function (_super) {
+	    __extends(App, _super);
+	    function App() {
 	        _super.apply(this, arguments);
 	    }
-	    Hello.prototype.render = function () {
-	        return React.createElement("h1", null, "Hello there!");
+	    App.prototype.render = function () {
+	        return (React.createElement("div", null, React.createElement("h1", null, "Hello there!"), React.createElement("p", null, "My name is Vladimir Khapalov and here is my personal GitHub page," + ' ' + "where my petprojects will be hosted.")));
 	    };
-	    return Hello;
+	    return App;
 	}(React.Component));
-	exports.Hello = Hello;
+	exports.App = App;
 
 
 /***/ }
