@@ -101,7 +101,8 @@
 	var React = __webpack_require__(1);
 	var bem = __webpack_require__(5);
 	var react_bootstrap_1 = __webpack_require__(6);
-	__webpack_require__(272);
+	var FontAwesome_1 = __webpack_require__(272);
+	__webpack_require__(277);
 	var b = bem('heading');
 	var OizeHeader = (function (_super) {
 	    __extends(OizeHeader, _super);
@@ -109,7 +110,7 @@
 	        _super.apply(this, arguments);
 	    }
 	    OizeHeader.prototype.render = function () {
-	        return (React.createElement("div", {className: b()}, React.createElement("header", {className: b('navbar')()}, React.createElement(react_bootstrap_1.Navbar, {staticTop: true}, React.createElement(react_bootstrap_1.Navbar.Header, null, React.createElement(react_bootstrap_1.Navbar.Brand, null, React.createElement("a", {href: '#'}, "Oize")), React.createElement(react_bootstrap_1.Navbar.Toggle, null)), React.createElement(react_bootstrap_1.Navbar.Collapse, null, React.createElement(react_bootstrap_1.Nav, null, React.createElement(react_bootstrap_1.NavItem, {eventKey: 1, href: '#'}, "Link"), React.createElement(react_bootstrap_1.NavItem, {eventKey: 2, href: '#'}, "Link"), React.createElement(react_bootstrap_1.NavDropdown, {eventKey: 3, title: 'Dropdown', id: 'basic-nav-dropdown'}, React.createElement(react_bootstrap_1.MenuItem, {eventKey: 3.1}, "Action"), React.createElement(react_bootstrap_1.MenuItem, {eventKey: 3.2}, "Another action"), React.createElement(react_bootstrap_1.MenuItem, {eventKey: 3.3}, "Something else here"), React.createElement(react_bootstrap_1.MenuItem, {divider: true}), React.createElement(react_bootstrap_1.MenuItem, {eventKey: 3.3}, "Separated link"))), React.createElement(react_bootstrap_1.Nav, {pullRight: true}, React.createElement(react_bootstrap_1.NavItem, {eventKey: 1, href: '#'}, "Link Right"), React.createElement(react_bootstrap_1.NavItem, {eventKey: 2, href: '#'}, "Link Right"))))), React.createElement(react_bootstrap_1.Jumbotron, {className: b('jumbo')()}, React.createElement("h1", {className: b('title')()}, "Hello there!"), React.createElement("p", {className: b('description')()}, "My name is Vladimir Khapalov and here is my personal GitHub page," + ' ' + "where my petprojects will be hosted."))));
+	        return (React.createElement("div", {className: b()}, React.createElement("header", {className: b('navbar')()}, React.createElement(react_bootstrap_1.Navbar, {staticTop: true}, React.createElement(react_bootstrap_1.Navbar.Header, null, React.createElement(react_bootstrap_1.Navbar.Brand, null, React.createElement("a", {href: '#'}, "Oize")), React.createElement(react_bootstrap_1.Navbar.Toggle, null)), React.createElement(react_bootstrap_1.Navbar.Collapse, null, React.createElement(react_bootstrap_1.Nav, {pullRight: true}, React.createElement(react_bootstrap_1.OverlayTrigger, {placement: 'bottom', overlay: React.createElement(react_bootstrap_1.Tooltip, {id: 'vk_tooltip'}, "My VK")}, React.createElement(react_bootstrap_1.NavItem, {eventKey: 1, href: 'https://vk.com/oizze'}, React.createElement(FontAwesome_1.FontAwesome, {name: 'vk'}))), React.createElement(react_bootstrap_1.OverlayTrigger, {placement: 'bottom', overlay: React.createElement(react_bootstrap_1.Tooltip, {id: 'github_tooltip'}, "My GitHub")}, React.createElement(react_bootstrap_1.NavItem, {eventKey: 2, href: 'https://github.com/Oize'}, React.createElement(FontAwesome_1.FontAwesome, {name: 'github'}))), React.createElement(react_bootstrap_1.OverlayTrigger, {placement: 'bottom', overlay: React.createElement(react_bootstrap_1.Tooltip, {id: 'email_tooltip'}, "Email me")}, React.createElement(react_bootstrap_1.NavItem, {eventKey: 3, href: 'mailto:khapaloff@gmail.com?subject=GitHubPage'}, React.createElement(FontAwesome_1.FontAwesome, {name: 'envelope'}))))))), React.createElement(react_bootstrap_1.Jumbotron, {className: b('jumbo')()}, React.createElement("h1", {className: b('title')()}, "Hello there!"), React.createElement("p", {className: b('description')()}, "My name is Vladimir Khapalov and here is my personal GitHub page," + ' ' + "where my petprojects will be hosted."))));
 	    };
 	    return OizeHeader;
 	}(React.Component));
@@ -19709,20 +19710,76 @@
 /* 272 */
 /***/ function(module, exports, __webpack_require__) {
 
+	"use strict";
+	var __extends = (this && this.__extends) || function (d, b) {
+	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+	    function __() { this.constructor = d; }
+	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+	};
+	var React = __webpack_require__(1);
+	__webpack_require__(273);
+	var FontAwesome = (function (_super) {
+	    __extends(FontAwesome, _super);
+	    function FontAwesome() {
+	        _super.apply(this, arguments);
+	    }
+	    FontAwesome.prototype.render = function () {
+	        var className = "fa fa-" + this.props.name;
+	        if (this.props.size) {
+	            className += " fa-" + this.props.size;
+	        }
+	        if (this.props.spin) {
+	            className += " fa-spin";
+	        }
+	        if (this.props.pulse) {
+	            className += " fa-pulse";
+	        }
+	        if (this.props.border) {
+	            className += " fa-border";
+	        }
+	        if (this.props.fixedWidth) {
+	            className += " fa-fw";
+	        }
+	        if (this.props.inverse) {
+	            className += " fa-inverse";
+	        }
+	        if (this.props.flip) {
+	            className += " fa-flip-" + this.props.flip;
+	        }
+	        if (this.props.rotate) {
+	            className += " fa-rotate-" + this.props.rotate;
+	        }
+	        if (this.props.stack) {
+	            className += " fa-stack-" + this.props.stack;
+	        }
+	        if (this.props.className) {
+	            className += " " + this.props.className;
+	        }
+	        return (React.createElement("span", {className: className}));
+	    };
+	    return FontAwesome;
+	}(React.Component));
+	exports.FontAwesome = FontAwesome;
+
+
+/***/ },
+/* 273 */
+/***/ function(module, exports, __webpack_require__) {
+
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(273);
+	var content = __webpack_require__(274);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(275)(content, {});
+	var update = __webpack_require__(276)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/less-loader/index.js?sourceMap!./Header.less", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/less-loader/index.js?sourceMap!./Header.less");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/less-loader/index.js?sourceMap!./FontAwesome.less", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/less-loader/index.js?sourceMap!./FontAwesome.less");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -19732,21 +19789,21 @@
 	}
 
 /***/ },
-/* 273 */
+/* 274 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(274)();
+	exports = module.exports = __webpack_require__(275)();
 	// imports
 	
 	
 	// module
-	exports.push([module.id, ".heading__navbar {\n  margin-bottom: -20px;\n}\n.heading__title {\n  text-align: center;\n}\n.heading__description {\n  text-align: center;\n}\n", ""]);
+	exports.push([module.id, "", ""]);
 	
 	// exports
 
 
 /***/ },
-/* 274 */
+/* 275 */
 /***/ function(module, exports) {
 
 	/*
@@ -19802,7 +19859,7 @@
 
 
 /***/ },
-/* 275 */
+/* 276 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -20051,6 +20108,46 @@
 		if(oldSrc)
 			URL.revokeObjectURL(oldSrc);
 	}
+
+
+/***/ },
+/* 277 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(278);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(276)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/less-loader/index.js?sourceMap!./Header.less", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/less-loader/index.js?sourceMap!./Header.less");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 278 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(275)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, ".heading__navbar {\n  margin-bottom: -20px;\n}\n.heading__title {\n  text-align: center;\n}\n.heading__description {\n  text-align: center;\n}\n", ""]);
+	
+	// exports
 
 
 /***/ }
