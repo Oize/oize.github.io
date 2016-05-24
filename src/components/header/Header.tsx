@@ -2,12 +2,14 @@ import * as React from 'react';
 import * as bem from 'bem-cn';
 import {
     Jumbotron,
-    MenuItem,
     Nav,
     Navbar,
-    NavDropdown,
-    NavItem
+    NavItem,
+    OverlayTrigger,
+    Tooltip
  } from 'react-bootstrap';
+
+ import { FontAwesome } from '../FontAwesome/FontAwesome';
 
 import './Header.less'
 
@@ -26,20 +28,34 @@ export class OizeHeader extends React.Component<any, any> {
                     <Navbar.Toggle />
                     </Navbar.Header>
                     <Navbar.Collapse>
-                    <Nav>
-                        <NavItem eventKey={1} href='#'>Link</NavItem>
-                        <NavItem eventKey={2} href='#'>Link</NavItem>
-                        <NavDropdown eventKey={3} title='Dropdown' id='basic-nav-dropdown'>
-                        <MenuItem eventKey={3.1}>Action</MenuItem>
-                        <MenuItem eventKey={3.2}>Another action</MenuItem>
-                        <MenuItem eventKey={3.3}>Something else here</MenuItem>
-                        <MenuItem divider />
-                        <MenuItem eventKey={3.3}>Separated link</MenuItem>
-                        </NavDropdown>
-                    </Nav>
                     <Nav pullRight>
-                        <NavItem eventKey={1} href='#'>Link Right</NavItem>
-                        <NavItem eventKey={2} href='#'>Link Right</NavItem>
+                        <OverlayTrigger placement='bottom' overlay={
+                            <Tooltip id='vk_tooltip'>
+                                My VK
+                            </Tooltip>
+                        }>
+                            <NavItem eventKey={1} href='https://vk.com/oizze' >
+                                <FontAwesome name='vk' />
+                            </NavItem>
+                        </OverlayTrigger>
+                        <OverlayTrigger placement='bottom' overlay={
+                            <Tooltip id='github_tooltip'>
+                                My GitHub
+                            </Tooltip>
+                        }>
+                            <NavItem eventKey={2} href='https://github.com/Oize' >
+                                <FontAwesome name='github' />
+                            </NavItem>
+                        </OverlayTrigger>
+                        <OverlayTrigger placement='bottom' overlay={
+                            <Tooltip id='email_tooltip'>
+                                Email me
+                            </Tooltip>
+                        }>
+                            <NavItem eventKey={3} href='mailto:khapaloff@gmail.com?subject=GitHubPage' >
+                                <FontAwesome name='envelope' />
+                            </NavItem>
+                        </OverlayTrigger>
                     </Nav>
                     </Navbar.Collapse>
                 </Navbar>
@@ -47,7 +63,8 @@ export class OizeHeader extends React.Component<any, any> {
                 <Jumbotron className={b('jumbo')()}>
                     <h1 className={b('title')()}>Hello there!</h1>
                     <p className={b('description')()}>My name is Vladimir Khapalov and here is my personal GitHub page,
-                    where my petprojects will be hosted.</p>
+                        where my petprojects will be hosted.
+                    </p>
                 </Jumbotron>
             </div>
             );
